@@ -109,4 +109,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   topBounds: 30
-  lowerBounds: -15
+  lowerBounds: -20
