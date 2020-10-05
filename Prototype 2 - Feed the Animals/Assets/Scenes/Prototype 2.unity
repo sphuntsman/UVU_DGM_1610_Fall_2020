@@ -308,6 +308,8 @@ MonoBehaviour:
   animalIndex: 0
   spawnRangeX: 20
   spawnPosZ: 20
+  startDelay: 1
+  spawnInterval: 3
 --- !u!4 &282114384
 Transform:
   m_ObjectHideFlags: 0
@@ -680,7 +682,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontalInput: 0
-  speed: 10
+  speed: 15
   projectile: {fileID: 1779612656653097317, guid: 282730b3655d9b545bc87e8d881efd04,
     type: 3}
 --- !u!1 &1590138454
