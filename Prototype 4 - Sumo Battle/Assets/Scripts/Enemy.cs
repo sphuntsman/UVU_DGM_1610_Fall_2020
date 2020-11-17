@@ -21,6 +21,11 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         Vector3 lookDirection = (player.transform.position - transform.position).normalized;
-        enemyRb.AddForce(lookDirection * speed);
+        enemyRb.AddForce(lookDirection * speed);  
+        // Destroys enemy after falling off the platform
+        if(transform.position.y < -10)
+        {
+            Destroy(gameObject);
+        }
     }
 }
