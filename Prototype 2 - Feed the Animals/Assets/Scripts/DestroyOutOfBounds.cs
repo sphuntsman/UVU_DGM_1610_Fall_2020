@@ -4,29 +4,32 @@ using UnityEngine;
 
 public class DestroyOutOfBounds : MonoBehaviour
 {
-    public float topBounds = 30f;
+    private float topBound = 30;
+    private float lowerBound = -10;
 
-    public float lowerBounds = -20f;
-
-    void Awake()
+    // Start is called before the first frame update
+    void Start()
     {
-        Time.timeScale = 1;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Destroy any object entering the topbounds
-        if(transform.position.z > topBounds)
+        if (transform.position.z > topBound)
         {
+            // Instead of destroying the projectile when it leaves the screen
+            //Destroy(gameObject);
+
+            // Just deactivate it
+            gameObject.SetActive(false);
+
+        }
+        else if (transform.position.z < lowerBound)
+        {
+            Debug.Log("Game Over!");
             Destroy(gameObject);
         }
-        // Destroy any object entering the lowerbounds
-        else if(transform.position.z < lowerBounds)
-        {
-            Debug.Log("GAME OVER");
-            Destroy(gameObject);
-            Time.timeScale = 0;
-        }
+
     }
 }
